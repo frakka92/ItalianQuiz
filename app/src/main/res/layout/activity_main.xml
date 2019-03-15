@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/presentation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+
+                <ImageView
+                    android:id="@+id/my_pic"
+                    android:layout_width="96dp"
+                    android:layout_height="78dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/pic" />
+
+                <TextView
+                    style="@style/text"
+                    android:text="@string/description" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/header"
+                style="@style/title"
+                android:layout_below="@+id/presentation"
+                android:text="@string/header"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/presentation" />
+
+
+            <RadioGroup
+                android:id="@+id/radio1"
+                style="@style/radio_group"
+                android:layout_below="@+id/header">
+
+                <TextView
+                    android:id="@+id/question1"
+                    style="@style/question_header" />
+
+                <RadioButton
+                    android:id="@+id/box11"
+                    style="@style/radio" />
+
+                <RadioButton
+                    android:id="@+id/box12"
+                    style="@style/radio" />
+
+                <RadioButton
+                    android:id="@+id/box13"
+                    style="@style/radio" />
+
+                <RadioButton
+                    android:id="@+id/box14"
+                    style="@style/radio" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radio2"
+                style="@style/radio_group"
+                android:layout_below="@+id/radio1">
+
+                <TextView
+                    android:id="@+id/question2"
+                    style="@style/question_header" />
+
+                <RadioButton
+                    android:id="@+id/box21"
+                    style="@style/radio" />
+
+                <RadioButton
+                    android:id="@+id/box22"
+                    style="@style/radio" />
+
+                <RadioButton
+                    android:id="@+id/box23"
+                    style="@style/radio" />
+
+                <RadioButton
+                    android:id="@+id/box24"
+                    style="@style/radio" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/radio3"
+                style="@style/radio_group"
+                android:layout_below="@+id/radio2">
+
+                <TextView
+                    android:id="@+id/question3"
+                    style="@style/question_header" />
+
+                <CheckBox
+                    android:id="@+id/box31"
+                    style="@style/checkbox"
+                    android:layout_below="@id/question3" />
+
+                <CheckBox
+                    android:id="@+id/box32"
+                    style="@style/checkbox"
+                    android:layout_below="@id/box31" />
+
+                <CheckBox
+                    android:id="@+id/box33"
+                    style="@style/checkbox"
+                    android:layout_below="@id/box32" />
+
+                <CheckBox
+                    android:id="@+id/box34"
+                    style="@style/checkbox"
+                    android:layout_below="@id/box33" />
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/radio4"
+                style="@style/radio_group"
+                android:layout_below="@+id/radio3">
+
+                <TextView
+                    android:id="@+id/question4"
+                    style="@style/question_header" />
+
+                <RadioButton
+                    android:id="@+id/box41"
+                    style="@style/radio" />
+
+                <RadioButton
+                    android:id="@+id/box42"
+                    style="@style/radio" />
+
+                <RadioButton
+                    android:id="@+id/box43"
+                    style="@style/radio" />
+
+                <RadioButton
+                    android:id="@+id/box44"
+                    style="@style/radio" />
+            </RadioGroup>
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                style="@style/button"
+                android:layout_below="@id/radio4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:onClick="submitAnswers"
+                app:srcCompat="@drawable/ita" />
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

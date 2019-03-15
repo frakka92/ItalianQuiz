@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">ItalianQuiz</string>
+    <string name="description">Hello!My name is Francesca and I will be you Italian teacher for some questions. Let\'s get started!</string>
+    <string name="header">What is you level of italian?</string>
+
+    <string name="question">Question</string>
+    <string name="answer">Answer</string>
+
+    <!-- Question 1 -->
+    <string name="question1">What is the italian for \"hello/hi/bye\"?</string>
+    <string name="answer11">Ciao Bella!</string>
+    <string name="answer12">Buongiorno</string>
+    <string name="answer13">Vuoi un gelato?</string>
+    <string name="answer14">Ciao</string>
+
+    <!-- Question 2 -->
+    <string name="question2">How do you say \"thank you\" in italian?</string>
+    <string name="answer21">Per favore</string>
+    <string name="answer22">Prego</string>
+    <string name="answer23">Grazie</string>
+    <string name="answer24">Grazii</string>
+
+    <!-- Question 3 -->
+    <string name="question3">What does \"prego\" mean?</string>
+    <string name="answer31">See you later</string>
+    <string name="answer32">Good morning</string>
+    <string name="answer33">You\'re welcome</string>
+    <string name="answer34">After you</string>
+
+    <!-- Question 4 -->
+    <string name="question4">What\'s the italian for \"cold\"?</string>
+    <string name="answer41">Umido</string>
+    <string name="answer42">Caldo</string>
+    <string name="answer43">Freddo</string>
+    <string name="answer44">Tiepido</string>
+
+</resources>
