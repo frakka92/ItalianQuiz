@@ -34,4 +34,6 @@
     <string name="answer43">Freddo</string>
     <string name="answer44">Tiepido</string>
 
+    <string name="question_trip">Have you ever traveled to Italy?</string>
+    <string name="yes_no">Yes or No?</string>
 </resources>

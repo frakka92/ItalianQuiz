@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,7 +23,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="8dp">
-
 
                 <ImageView
                     android:id="@+id/my_pic"
@@ -47,7 +45,6 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@id/presentation" />
-
 
             <RadioGroup
                 android:id="@+id/radio1"
@@ -158,10 +155,26 @@
                     style="@style/radio" />
             </RadioGroup>
 
+            <TextView
+                android:id="@+id/question_trip"
+                style="@style/question_header"
+                android:layout_below="@id/radio4"
+                android:layout_margin="8dp" />
+
+            <EditText
+                android:id="@+id/trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/question_trip"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="36dp"
+                android:hint="@string/yes_no"
+                android:inputType="textCapSentences" />
+
             <ImageButton
                 android:id="@+id/imageButton"
                 style="@style/button"
-                android:layout_below="@id/radio4"
+                android:layout_below="@id/trip"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="8dp"
                 android:onClick="submitAnswers"

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -98,18 +99,21 @@ public class MainActivity extends AppCompatActivity {
         RadioButton box44 = findViewById(R.id.box44);
         box44.setText(getString(R.string.answer44));
 
+        TextView tripEditText = findViewById(R.id.question_trip);
+        tripEditText.setText(R.string.question_trip);
+
     }
 
-    public void submitAnswers(View v){
+    public void submitAnswers(View v) {
         this.setScore(0);
 
         RadioButton box14 = findViewById(R.id.box14);
-        if(box14.isChecked()){
+        if (box14.isChecked()) {
             this.setScore(this.getScore() + 1);
         }
 
         RadioButton box23 = findViewById(R.id.box23);
-        if(box23.isChecked()){
+        if (box23.isChecked()) {
             this.setScore(this.getScore() + 1);
         }
 
@@ -118,16 +122,27 @@ public class MainActivity extends AppCompatActivity {
         CheckBox box33 = findViewById(R.id.box33);
         CheckBox box34 = findViewById(R.id.box34);
 
-        if(box33.isChecked() && box34.isChecked() && !(box31.isChecked()) && !(box32.isChecked())){
+        if (box33.isChecked() && box34.isChecked() && !(box31.isChecked()) && !(box32.isChecked())) {
             this.setScore(this.getScore() + 1);
         }
 
         RadioButton box43 = findViewById(R.id.box43);
-        if(box43.isChecked()){
+        if (box43.isChecked()) {
             this.setScore(this.getScore() + 1);
         }
 
         String text = "You have guessed " + this.getScore() + " answers";
-        Toast.makeText(getApplicationContext(), text , Toast.LENGTH_LONG).show();
+
+        EditText tripEditText = findViewById(R.id.trip);
+        String textEditText = tripEditText.getText().toString().toLowerCase();
+
+        if (textEditText.contains("yes"))
+            text += "\nCongrats!Come to visit us again!";
+        else if (textEditText.contains("no"))
+            text += "\nWhat are you waiting for?";
+        else
+            text += "\nAnswer not valid";
+
+        Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
     }
 }
