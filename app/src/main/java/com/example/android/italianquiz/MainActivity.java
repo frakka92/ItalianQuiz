@@ -1,6 +1,5 @@
 package com.example.android.italianquiz;
 
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,10 +13,16 @@ public class MainActivity extends AppCompatActivity {
 
     private int score = 0;
 
+    /**
+     * Get the actual score
+     */
     public int getScore() {
         return score;
     }
 
+    /**
+     * Set the score
+     */
     public void setScore(int score) {
         this.score = score;
     }
@@ -99,12 +104,17 @@ public class MainActivity extends AppCompatActivity {
         RadioButton box44 = findViewById(R.id.box44);
         box44.setText(getString(R.string.answer44));
 
-        TextView tripEditText = findViewById(R.id.question_trip);
-        tripEditText.setText(R.string.question_trip);
+        TextView tripEditText = findViewById(R.id.question_famous);
+        tripEditText.setText(R.string.famous);
 
     }
 
+    /**
+     * Method called when button is pressed, checks answers and changes the score
+     */
     public void submitAnswers(View v) {
+        String pizza = "Pizza";
+        String guess = "";
         this.setScore(0);
 
         RadioButton box14 = findViewById(R.id.box14);
@@ -131,17 +141,15 @@ public class MainActivity extends AppCompatActivity {
             this.setScore(this.getScore() + 1);
         }
 
+        EditText famousEditText = findViewById(R.id.famous);
+        if (famousEditText.getText().toString().equalsIgnoreCase(pizza)) {
+            this.setScore(this.getScore() + 1);
+            guess = "\nYes it's right food!Good job";
+        } else
+            guess = "\nThink about a very famous italian food";
+
         String text = "You have guessed " + this.getScore() + " answers";
-
-        EditText tripEditText = findViewById(R.id.trip);
-        String textEditText = tripEditText.getText().toString().toLowerCase();
-
-        if (textEditText.contains("yes"))
-            text += "\nCongrats!Come to visit us again!";
-        else if (textEditText.contains("no"))
-            text += "\nWhat are you waiting for?";
-        else
-            text += "\nAnswer not valid";
+        text += guess;
 
         Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
     }
