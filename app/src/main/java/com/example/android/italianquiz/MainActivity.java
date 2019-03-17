@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         EditText famousEditText = findViewById(R.id.famous);
         if (famousEditText.getText().toString().equalsIgnoreCase(pizza)) {
             this.setScore(this.getScore() + 1);
-            guess = "\nYes it's right food!Good job";
+            guess = "\nYes it's the right food!Good job";
         } else
             guess = "\nThink about a very famous italian food";
 
