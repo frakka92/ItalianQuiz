@@ -2,7 +2,6 @@
     <string name="app_name">ItalianQuiz</string>
     <string name="description">Hello!My name is Francesca and I will be your Italian teacher for some questions. Let\'s get started!</string>
     <string name="header">What is you level of italian?</string>
-
     <string name="question">Question</string>
     <string name="answer">Answer</string>
 

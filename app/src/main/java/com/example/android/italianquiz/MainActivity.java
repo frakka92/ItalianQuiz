@@ -148,8 +148,7 @@ public class MainActivity extends AppCompatActivity {
         } else
             guess = "\nThink about a very famous italian food";
 
-        String text = "You have guessed " + this.getScore() + " answers";
-        text += guess;
+        String text = "You have guessed " + this.getScore() + " answers" + guess;
 
         Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
     }
